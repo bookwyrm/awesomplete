@@ -325,6 +325,7 @@ _.prototype = {
 
 			if (this.ul.children.length === 0) {
 
+				$.fire(this.input, 'awesomplete-no-results');
                 this.status.textContent = "No results found";
 
 				this.close({ reason: "nomatches" });
@@ -338,6 +339,7 @@ _.prototype = {
 		else {
 			this.close({ reason: "nomatches" });
 
+			$.fire(this.input, 'awesomplete-no-results');
                 this.status.textContent = "No results found";
 		}
 	}
