@@ -300,6 +300,8 @@ _.prototype = {
 		var me = this;
 		var value = this.input.value;
 
+		$.fire(this.input, 'awesomplete-evaluate', { value: value });
+
 		if (value.length >= this.minChars && this._list && this._list.length > 0) {
 			this.index = -1;
 			// Populate list with options that match
