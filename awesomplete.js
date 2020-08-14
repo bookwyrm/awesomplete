@@ -339,7 +339,6 @@ _.prototype = {
 		else {
 			this.close({ reason: "nomatches" });
 
-			$.fire(this.input, 'awesomplete-no-results');
                 this.status.textContent = "No results found";
 		}
 	}
